@@ -7,12 +7,23 @@ import SingleStepDescription from './SingleStepDescription'
 
 class StepDescriptions extends React.Component {
 
+  state = {
+    title: ''
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      title: e.target.value
+    })
+  }
+
     render() {
         let count_for_key = 0;
         const {step_title, step_items, step_no, append_description, remove_description} = this.props;
         const descriptions = step_items.map((item, idx) => {
             count_for_key += 1;
             return (
+              <>
                 <SingleStepDescription
                     key = {item.title+count_for_key}
                     title={item.title?item.title:null}
@@ -26,6 +37,16 @@ class StepDescriptions extends React.Component {
                     step_no={step_no}
                     idx={idx}
                 />
+                <button className={"RemoveButton"} 
+                  onClick={()=>{
+                    //console.log(idx2);
+                    this.props.remove_step(step_no, idx);
+                    this.forceUpdate();
+                  }}
+                >
+                  제거
+                </button>
+              </>
             )
         })
         return (
@@ -35,6 +56,15 @@ class StepDescriptions extends React.Component {
                 <br></br>
                 <br></br>
                 {descriptions}
+                <input value={this.state.title} name="title" onChange={this.handleChange} />
+          
+                <button onClick={()=>{
+                    this.props.append_step(this.state.title, this.props.step_no , this.props.idx, 1)
+                    this.forceUpdate()
+                  }}
+                >
+                  추가
+                </button>
             </Container>
         );
     }

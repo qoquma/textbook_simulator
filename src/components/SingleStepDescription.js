@@ -67,11 +67,12 @@ class SingleStepDescription extends React.Component{
         const {title,description_title, components} = this.props;
 
         const RemoveButton = ({idx2}) => (
-          <button className={"RemoveButton"} onClick={()=>{
-            //console.log(idx2);
-            this.props.remove_description(this.props.step_no, this.props.idx, idx2)
-            this.forceUpdate()
-          }}
+          <button className={"RemoveButton"} 
+            onClick={()=>{
+              //console.log(idx2);
+              this.props.remove_description(this.props.step_no, this.props.idx, idx2)
+              this.forceUpdate()
+            }}
           >
             제거
           </button>
@@ -81,13 +82,16 @@ class SingleStepDescription extends React.Component{
             if (comp.type === "image") {
                 count_for_key += 1;
                 return (
-                    <div key={comp.src+count_for_key}>
+                    <div key={comp.src+count_for_key} style={{alignItems: "center"}}>
                       {console.log(comp.src)}
+                      <div>
                         <img src={require('../textbook/'+comp.src)} alt={comp.name} width="100px" />
                         <br />
                         <b> {reactHtmlParser(comp.name? comp.name:null)} </b>
                         <br />
-                        <RemoveButton idx2={idx2}/>
+                      </div>
+                        
+                        <RemoveButton idx2={idx2} />
                     </div> 
                     
                 );

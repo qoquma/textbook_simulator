@@ -89,8 +89,8 @@ function App() {
     } 
   
     new_textbook.textbook_contents[step_no].step_items[idx].components.push(object);
-    console.log(new_textbook.textbook_contents[step_no].step_items[idx])
-    setTextbook(new_textbook)
+    console.log(new_textbook.textbook_contents[step_no].step_items[idx]);
+    setTextbook(new_textbook);
   }
 
   const remove_description = (step_no, idx, idx2) => {
@@ -98,9 +98,25 @@ function App() {
     let new_textbook = textbook
     new_textbook.textbook_contents[step_no].step_items[idx].components.splice(idx2,1);
     //console.log(new_textbook.textbook_contents[step_no].step_items[idx].components[2])
-    setTextbook(
-      new_textbook
-    )
+    setTextbook(new_textbook);
+  }
+
+  const append_step = (text, step_no) => {
+    let new_textbook = textbook;
+    const object = {
+      "title": text,
+      "tags": [],
+      "collapse": false,
+      "components": []
+    }
+
+    new_textbook.textbook_contents[step_no].step_items.push(object);
+  }
+
+  const remove_step = (step_no, idx) => {
+    let new_textbook = textbook
+    new_textbook.textbook_contents[step_no].step_items.splice(idx,1);
+    setTextbook(new_textbook)
   }
 
 
@@ -118,6 +134,8 @@ function App() {
         textbook_summary={textbook.textbook_summary}
         append_description={append_description}
         remove_description={remove_description}
+        append_step={append_step}
+        remove_step={remove_step}
       />
     </div>
     </div>
