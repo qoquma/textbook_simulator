@@ -26,6 +26,8 @@
 
 .CardDescription{
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .SquareIcon {
@@ -34,4 +36,17 @@
     vertical-align: middle;
     margin-right:calc(5px + 2vmin);
     position: relative;
+}
+
+.CardBlock {
+  display: block;
+  align-items: center;
+  position: relative;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.RemoveButton {
+  display: block;
+  margin: auto;
 }

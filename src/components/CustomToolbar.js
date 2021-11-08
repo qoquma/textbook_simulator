@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomHeart = () => <span>♥</span>;
 
-const CustomToolbar = () => (
+const CustomToolbar = ({complete, changeFolder}) => (
   <div id="toolbar">
     <select className="ql-font tool-item">
       <option value="arial" selected>
@@ -29,7 +29,15 @@ const CustomToolbar = () => (
     <button className="ql-insertHeart tool-item">
       <CustomHeart />
     </button>
-    <select className="ql-size tool-item"/>
+    
+      <button style={{width:70}} onClick={complete}> 
+        <div style={{margin:'20%', display:'inline-block', width:50, height:40}}> 수정완료 </div>
+      </button>
+
+      <button style={{width:100}} onClick={changeFolder}> 
+        <div style={{margin:'10%', display:'inline-block', width:100, height:50}}> 교재폴더이름 </div>
+      </button>
+    
   </div>
 );
 

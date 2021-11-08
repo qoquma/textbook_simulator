@@ -23,6 +23,7 @@ import {materialDark, materialLight, vs, duotoneLight} from 'react-syntax-highli
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import gfm from 'remark-gfm';
+import Editor from './Editor';
 
 //const URL = API_PROTOCOL + API_URL;
 
@@ -45,6 +46,13 @@ class SingleStepDescription extends React.Component{
         this.setState({collapse1: !this.state.collapse1});
     }
 
+    setFile = (event) => {
+      // Get the details of the files
+      console.log(event.target.files[0])
+      this.props.append_description(event.target.files[0].name, this.props.step_no , this.props.idx, 2)
+      this.forceUpdate()
+    }
+
     render() {
         let count_for_key = 0;
         const { collapse1 } = this.state;
@@ -58,16 +66,30 @@ class SingleStepDescription extends React.Component{
         `
         const {title,description_title, components} = this.props;
 
-        const step_components = (components.length > 0) ? components.map((comp) => {
+        const RemoveButton = ({idx2}) => (
+          <button className={"RemoveButton"} onClick={()=>{
+            //console.log(idx2);
+            this.props.remove_description(this.props.step_no, this.props.idx, idx2)
+            this.forceUpdate()
+          }}
+          >
+            제거
+          </button>
+        )
+
+        const step_components = (components.length > 0) ? components.map((comp, idx2) => {
             if (comp.type === "image") {
                 count_for_key += 1;
                 return (
                     <div key={comp.src+count_for_key}>
+                      {console.log(comp.src)}
                         <img src={require('../textbook/'+comp.src)} alt={comp.name} width="100px" />
                         <br />
                         <b> {reactHtmlParser(comp.name? comp.name:null)} </b>
                         <br />
+                        <RemoveButton idx2={idx2}/>
                     </div> 
+                    
                 );
             } else if (comp.type === "desc") {
                 count_for_key += 1;
@@ -78,6 +100,7 @@ class SingleStepDescription extends React.Component{
                         <Markdown 
                             children={comp.description} rehypePlugins={[rehypeRaw]} />
                     </div>
+                    <RemoveButton idx2={idx2}/>
                 </div>
                 );
 
@@ -90,6 +113,7 @@ class SingleStepDescription extends React.Component{
                         children={comp.description} 
                         remarkPlugins={[[gfm, {borderWidth: "1px"}]]}
                     />
+                    <RemoveButton idx2={idx2}/>
                 </div>
                 );
             } else if (comp.type === "code") {
@@ -117,6 +141,7 @@ class SingleStepDescription extends React.Component{
                     }
                     }}
                 />
+                <RemoveButton idx2={idx2}/>
                 </div>);
 
             }
@@ -150,6 +175,16 @@ class SingleStepDescription extends React.Component{
                       <Editor placeholder={""} text={this.state.text} handleChange={this.handleChange}/>
                     <button onClick={()=>{append_description(this.state.text, step_no , idx)}}>추가</button>
                     */}
+                    <Editor placeholder={""} text={this.state.text} handleChange={this.handleChange}/>
+                    <button onClick={()=>{
+                        this.props.append_description(this.state.text, this.props.step_no , this.props.idx, 1)
+                 
+                        this.forceUpdate()
+                      }}
+                    >
+                      추가
+                    </button>
+                    <input type="file" name="file" onChange={this.setFile.bind(this)} />
                 </CardBody>
                 </Collapse>
             </Card>

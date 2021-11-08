@@ -11,7 +11,7 @@ class TextbookPage extends React.Component{
 
     render() {
         let count_for_key = 0;
-        const { textbook_summary, textbook_title,textbook_subtitle, step_description_items,toast_step_items, append_description } = this.props;
+        const { textbook_summary, textbook_title,textbook_subtitle, step_description_items,toast_step_items, append_description, remove_description } = this.props;
         const step_diescriptions = step_description_items?step_description_items.map((item) => {
             count_for_key += 1;
             return (
@@ -21,6 +21,7 @@ class TextbookPage extends React.Component{
                     step_items={item.step_items?item.step_items:[]}
                     step_no={item.step_no?item.step_no:(count_for_key-1)}
                     append_description={append_description}
+                    remove_description={remove_description}
                 />
             )
         }):""
