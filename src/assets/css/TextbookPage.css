@@ -61,9 +61,7 @@
 }
 
 #toolbar {
-    display: table;
-    height: 100px;
-    width: 1px;
+    display: flex;
 }
 
 .tool-item {

@@ -24,6 +24,7 @@ import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import gfm from 'remark-gfm';
 import Editor from './Editor';
+import CustomToolbar from './CustomToolbar';
 
 //const URL = API_PROTOCOL + API_URL;
 
@@ -57,7 +58,7 @@ class SingleStepDescription extends React.Component{
         let count_for_key = 0;
         const { collapse1 } = this.state;
         const markdown = `A paragraph with *emphasis* and **strong importance**.
-
+        
         > A block quote with ~strikethrough~ and a URL: https://reactjs.org.
         A table:
 
@@ -65,6 +66,7 @@ class SingleStepDescription extends React.Component{
         | - | - |
         `
         const {title,description_title, components} = this.props;
+
 
         const RemoveButton = ({idx2}) => (
           <button className={"RemoveButton"} 
@@ -85,7 +87,7 @@ class SingleStepDescription extends React.Component{
                     <div key={comp.src+count_for_key} style={{alignItems: "center"}}>
                       {console.log(comp.src)}
                       <div>
-                        <img src={require('../textbook/'+comp.src)} alt={comp.name} width="100px" />
+                        <img src={require('../textbook/'+comp.src)} alt={comp.name} width="300px" />
                         <br />
                         <b> {reactHtmlParser(comp.name? comp.name:null)} </b>
                         <br />
@@ -179,7 +181,15 @@ class SingleStepDescription extends React.Component{
                       <Editor placeholder={""} text={this.state.text} handleChange={this.handleChange}/>
                     <button onClick={()=>{append_description(this.state.text, step_no , idx)}}>추가</button>
                     */}
-                    <Editor placeholder={""} text={this.state.text} handleChange={this.handleChange}/>
+                    {
+                      collapse1 && (
+                      <div>
+                        <CustomToolbar idx={this.props.idx} step_no={this.props.step_no}/>
+                        <Editor placeholder={""} text={this.state.text} handleChange={this.handleChange} idx={this.props.idx} step_no={this.props.step_no}/>
+                      </div>
+                      )
+                    }
+                    
                     <button onClick={()=>{
                         this.props.append_description(this.state.text, this.props.step_no , this.props.idx, 1)
                  

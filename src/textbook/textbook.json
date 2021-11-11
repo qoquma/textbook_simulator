@@ -1,0 +1,319 @@
+{
+	"textbook_title": "무궁화 꽃이 피었습니다.",
+	"textbook_subtitle": {
+		"stage": "Adventurer",
+		"language": "Scratch",
+		"level": "2"
+	},
+	"textbook_summary": {
+		"summary_image_src": "",
+		"summary_text": ""
+	},
+	"textbook_contents": [
+		{
+			"step_title": "스프라이트, 배경, 변수 설정",
+			"step_no": 0,
+			"step_items": [
+				{
+					"title": "배경 설정하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/background.PNG"
+						},
+						{
+							"type": "desc",
+							"description": "<p>배경을 설정해 줍니다.</p>"
+						}
+					]
+				},
+				{
+					"title": "스프라이트 생성하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/sprite.PNG"
+						},
+						{
+							"type": "desc",
+							"description": "<p>술래가 될 공룡 스프라이트와 강아지 스프라이트를 찾아 추가합니다.</p>"
+						}
+					]
+				},
+				{
+					"title": "변수 생성하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/var.PNG"
+						},
+						{
+							"type": "desc",
+							"description": "<p><span style=\"color: rgb(255, 153, 0);\">뒤돌아봄</span> 변수를 생성합니다.</p>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"step_title": "술래 뒤 돌아보기",
+			"step_no": 1,
+			"step_items": [
+				{
+					"title": "술래 뒤 돌아보기 ",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/step1_a.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p>술래의 모양을&nbsp;<span style=\"color: lime;\">랜덤</span>한 시간마다 바꿔주며 뒤를 돌아보게 만듭니다.</p><p>=&gt;&nbsp;술래가 뒤를 돌아보면&nbsp;<span style=\"color: lime;\">랜덤</span>한 시간마다 \"무궁화 꽃이 피었습니다.\"를 <span style=\"color: rgb(153, 51, 255);\">말합니다.</span></p>"
+						}
+					]
+				},
+				{
+					"title": "모양 바꾸기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/shape.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>\"술래\"에게 <span style=\"background-color: rgb(255, 255, 0);\">총 4가지의 모양이 있습니다.</span></p><p><span style=\"color: rgb(177, 3, 252);\">2번 모양</span>이<strong> 앞을 보고 있는 모양이고</strong></p><p><span style=\"color: rgb(177, 3, 252);\">3번 모양</span>이 <strong>뒤를 돌아본 모양입니다.</strong></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/change_shape.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p><span style=\"color: rgb(177, 3, 252); background-color: rgb(255, 255, 204);\">모양을 ~로 바꾸기 블럭</span><span style=\"background-color: rgb(255, 255, 204);\">을 이용해서</span> <strong>공룡이 뒤를 돌아보도록 만들어 보세요.</strong></p>"
+						}
+					]
+				},
+				{
+					"title": "계속 뒤 돌아보기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p>\"술래\"가 계속 뒤를 돌아보려면&nbsp;<span style=\"color: rgb(177, 3, 252);\">앞을 본</span> <span style=\"color: rgb(177, 3, 252);\">모양</span>과&nbsp;<span style=\"color: rgb(177, 3, 252);\">뒤돌아본 모양</span>을 번갈아 바꾸는 것을&nbsp;<span style=\"color: orange;\">무한반복</span>&nbsp;해야합니다.</p><p><span style=\"color: orange;\">무한반복하기</span>&nbsp;블럭을 이용하여<span style=\"background-color: rgb(255, 255, 204);\">&nbsp;\"술래\"가 계속 뒤를 보도록 만들어보세요.</span></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/infloop.png"
+						}
+					]
+				},
+				{
+					"title": "간격 추가하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/infloop_shape.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p><strong>모양을 번갈아 가며 바꾸었는데 공룡의 모습이 바뀌지 않습니다.</strong></p><p><span style=\"background-color: rgb(255, 255, 204); color: rgb(177, 3, 252);\">앞을 본 모양</span><span style=\"background-color: rgb(255, 255, 204);\">으로 바꾸자마자</span>&nbsp;<span style=\"color: rgb(177, 3, 252);\">뒤 돌아본 모양</span>으로 바꾸어서 우리의 눈에는&nbsp;<span style=\"color: rgb(177, 3, 252);\">뒤 돌아본 모양</span>밖에 보이지 않는답니다.</p>"
+						},
+						{
+							"type": "desc",
+							"description": "<p><strong style=\"color: orange;\">~초 기다리기 블럭</strong><strong>을 이용하여 해결해보세요.</strong></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/wait.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p><span style=\"color: rgb(177, 3, 252);\">모양을 바꾼다음</span>, <span style=\"background-color: rgb(255, 255, 204);\">우리가 바뀐 모양을 볼 수 있도록 </span><strong style=\"color: orange;\">기다려줘야합니다!</strong></p>"
+						}
+					]
+				},
+				{
+					"title": "랜덤한 시간 간격 만들기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p>\"술래\"가 항상 1초 간격으로 뒤를 돌아본다면 게임이 너무 쉬워집니다.</p><p>랜덤한 시간간격을 만들어서 술래가 뒤돌아보는것을 예측하기 힘들게 만들어봅시다.</p>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"step_title": "강아지 움직이기",
+			"step_no": 2,
+			"step_items": [
+				{
+					"title": "강아지 움직이기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/step1_b.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p><span style=\"color: deepskyblue;\">스페이스바를 누를 때마다 </span><span style=\"color: black;\">\"강아지\"는 \"술래\"를 향해 걸어갑니다.</span></p><p><span style=\"color: black;\">\"강아지\"는 </span><span style=\"color: blue;\">움직이면서 </span><span style=\"color: rgb(177, 3, 252);\">모양을 바꿔줍니다.</span></p>"
+						}
+					]
+				},
+				{
+					"title": "스페이스바를 눌렀을 때",
+					"tags": [],
+					"collapse": false,
+					"components": []
+				},
+				{
+					"title": "움직이며 모양 바꾸기",
+					"tags": [],
+					"collapse": false,
+					"components": []
+				}
+			]
+		},
+		{
+			"step_title": "변수 설정하기",
+			"step_no": 3,
+			"step_items": [
+				{
+					"title": "변수 설정하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/step2_a.gif"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/step2_b.PNG"
+						},
+						{
+							"type": "desc",
+							"description": "<p>술래가 뒤를 돌아보면 <span style=\"color: orange;\">뒤돌아봄 변수를 0으로 정해줍니다.</span></p><p><span style=\"color: black;\">술래가 다시 앞을 보면 </span><span style=\"color: rgb(255, 165, 0);\">뒤돌아봄 변수를 1로 정해줍니다.</span></p>"
+						}
+					]
+				},
+				{
+					"title": "변수 정하기",
+					"tags": [],
+					"collapse": false,
+					"components": []
+				}
+			]
+		},
+		{
+			"step_title": "성공 만들기",
+			"step_no": 4,
+			"step_items": [
+				{
+					"title": "성공 만들기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/success.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>\"강아지\"가 <span style=\"color: deepskyblue;\">\"술래\"에게 닿았다면 </span><span style=\"color: rgb(177, 3, 252);\">\"성공!\" 이라고 말하고</span> <span style=\"color: orange;\">모두 멈추어줍니다.</span></p>"
+						}
+					]
+				},
+				{
+					"title": "\"술래\"에게 닿았을 때",
+					"tags": [],
+					"collapse": false,
+					"components": []
+				},
+				{
+					"title": "말하고 모두 멈추기",
+					"tags": [],
+					"collapse": false,
+					"components": []
+				},
+				{
+					"title": "신호로 해결하기",
+					"tags": [],
+					"collapse": false,
+					"components": []
+				}
+			]
+		},
+		{
+			"step_title": "실패 만들기",
+			"step_no": 5,
+			"step_items": [
+				{
+					"title": "실패 만들기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "moogoongwha/failure.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p>\"강아지\"가 움직이다 \"술래\"가 뒤를 돌아보면 실패합니다.</p><p>실패하면 \"강아지\"는 <span style=\"color: rgb(177, 3, 252);\">\"ㅠㅠ\"라고 말하고 </span>\"술래\"는 신나게 <span style=\"color: blue;\">\"강아지\"쪽으로 움직입니다.</span></p><p>\"술래\"는 <span style=\"color: orange;\">\"강아지\"에 닿을때 까지 </span><span style=\"color: blue;\">움직이며 </span><span style=\"color: rgb(177, 3, 252);\">모양을 계속 바꿔줍니다.</span></p>"
+						}
+					]
+				},
+				{
+					"title": "변수 활용하기",
+					"tags": [],
+					"collapse": false,
+					"components": []
+				},
+				{
+					"title": "\"강아지\"에 닿을때 까지 움직이기",
+					"tags": [],
+					"collapse": false,
+					"components": []
+				},
+				{
+					"title": "움직이면서 모양 바꾸기",
+					"tags": [],
+					"collapse": false,
+					"components": []
+				}
+			]
+		}
+	],
+	"textbook_folder": "moogoongwha"
+}

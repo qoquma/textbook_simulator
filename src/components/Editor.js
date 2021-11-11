@@ -5,16 +5,9 @@ import ReactQuill, { Quill } from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "../assets/css/EditorStyles.css";
 
-function insertHeart() {
-  const cursorPosition = this.quill.getSelection().index;
-  this.quill.insertText(cursorPosition, "♥");
-  this.quill.setSelection(cursorPosition + 1);
+const imageHandler = () => {
+
 }
-
-/*
- * Custom toolbar component including the custom heart button and dropdowns
- */
-
 
 // Add sizes to whitelist and register them
 const Size = Quill.import("formats/size");
@@ -34,37 +27,32 @@ Font.whitelist = [
 Quill.register(Font, true);
 
 const Editor = (props) => {
-
+  console.log("editor", props.step_no);
   useEffect(() => {
     console.log(props.text)
   },[props.text])
 
-  let modules = {   
-    //syntax: true,  
+  const modules = {
     toolbar: {
-      container: "#toolbar",
-      handlers: {
-        insertHeart: insertHeart
-      }
-    }
+      container: ("#toolbar"+props.step_no+props.idx),
+    },
   };
 
-  let formats = [
+  const formats = [
     "header",
     "font",
     "size",
     "bold",
     "italic",
     "underline",
-    "strike",
-    "blockquote",
     "list",
     "bullet",
-    "indent",
-    "link",
+    "align",
+    "color",
+    "background",
     "image",
-    "color"
   ];
+
   return (
     <div className="text-editor">
       
@@ -74,6 +62,7 @@ const Editor = (props) => {
         placeholder={props.placeholder}
         modules={modules}
         formats={formats}
+        theme="snow"
       />
     </div>
   );

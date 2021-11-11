@@ -3,7 +3,7 @@ import './App.css';
 import TextbookPage from './components/TextbookPage';
 // import textbookJSON from './textbook/textbookJSON.json';
 // import pygame_bug from './textbook/pygame_bug/pygame_bug.json';
-import python_01 from './textbook/ColorSwitch/sample.json';
+import TEXTBOOK from './textbook/textbook.json';
 import './assets/css/TextbookPage.css'
 import CustomToolbar from './components/CustomToolbar';
 
@@ -14,7 +14,7 @@ let textbook_path = './textbook/ColorSwitch/sample.json';
 function App() {
   // let textbook = textbookJSON
   
-  const [textbook, setTextbook] = useState(python_01);
+  const [textbook, setTextbook] = useState(TEXTBOOK);
 
   useEffect(() => {
     console.log("textbook has changed",textbook);
@@ -123,9 +123,9 @@ function App() {
   return (
     <div className="frame">
     <div className="App">
-      <div className="CustomToolbar">
+      {/* <div className="CustomToolbar">
         <CustomToolbar complete={complete} changeFolder={changeFolder}/>
-      </div>
+      </div> */}
       <TextbookPage
         textbook_title={textbook.textbook_title}
         textbook_subtitle={textbook.textbook_subtitle}
