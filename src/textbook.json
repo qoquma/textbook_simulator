@@ -1,0 +1,452 @@
+{
+	"textbook_title": "벌레잡기",
+	"textbook_subtitle": {
+		"stage": "Adventurer",
+		"language": "Scratch",
+		"level": "2"
+	},
+	"textbook_summary": {
+		"summary_image_src": "",
+		"summary_text": ""
+	},
+	"textbook_contents": [
+		{
+			"step_title": "스프라이트, 배경, 변수 설정",
+			"step_no": 0,
+			"step_items": [
+				{
+					"title": "배경 설정하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/background.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>배경을 설정해 줍니다.</p><p>(Forest)</p>"
+						}
+					]
+				},
+				{
+					"title": "스프라이트 생성하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/\bsprite.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>\"벌레\" 스프라이트를 추가합니다.</p><p><br></p>"
+						}
+					]
+				},
+				{
+					"title": "변수 생성하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/var.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>점수, 제한시간 변수를 생성합니다.</p>"
+						}
+					]
+				},
+				{
+					"title": "모양 생성하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/\bcostume.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>\"벌레\" 스프라이트의 <span style=\"color: rgb(177, 3, 252);\">죽은 모양</span>을 만들어주세요.</p>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"step_title": "벌레 복제하기",
+			"step_no": 1,
+			"step_items": [
+				{
+					"title": "벌레 복제하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/duplicate.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p>\"벌레\"는 <span style=\"color: rgb(0, 227, 23);\">랜덤한 시간</span>마다 <span style=\"color: blue;\">무작위 위치에서 </span><span style=\"color: orange;\">복제됩니다.</span></p><p>\"원본 벌레\"는 <span style=\"color: rgb(177, 3, 252);\">숨겨주어 보이지 않게 합니다.</span></p>"
+						}
+					]
+				},
+				{
+					"title": "무작위 위치로 이동하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/random_move.gif"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/random_move.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p><strong>우선 벌레를 복제하여 여러마리로 만들기 전에, </strong></p><p>계속 <span style=\"color: blue;\">무작위 위치로 이동하게 해주세요.</span></p>"
+						}
+					]
+				},
+				{
+					"title": "무한 복제하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/duplicate2.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p><span style=\"color: blue;\">무작위 위치로 이동한 뒤,</span>&nbsp;<span style=\"color: orange;\">나자신 복제하기</span>를 이용하여&nbsp;그 자리에 복제본을 생성합니다.</p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/duplicate.png"
+						}
+					]
+				},
+				{
+					"title": "랜덤한 시간 간격 만들기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/duplicate.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p>벌레를 마구 복제되지만, 너무 많은것 같아요.</p><p><span style=\"color: rgb(0, 227, 23);\">난수와&nbsp;</span><span style=\"color: orange;\">~초 기다리기</span><span style=\"color: black;\">를 이용하여</span><span style=\"color: rgb(0, 227, 23);\">&nbsp;랜덤한&nbsp;</span>시간간격을 만들어줍시다.</p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/random_time.png"
+						}
+					]
+				},
+				{
+					"title": "원본 숨기기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p><strong>\"벌레\"를 </strong><strong style=\"color: orange;\">복제하며</strong><strong> </strong><strong style=\"color: blue;\">무작위위치로 이동하는 </strong><strong style=\"background-color: rgb(255, 255, 204);\">\"원본\" 스프라이트를 찾아보세요.</strong></p>"
+						},
+						{
+							"type": "desc",
+							"description": "<p><strong style=\"background-color: rgb(255, 255, 204);\">\"원본\" 스프라이트는 </strong><strong style=\"background-color: rgb(255, 255, 204); color: orange;\">\"복제본\" 만 생성해야하고</strong><strong style=\"background-color: rgb(255, 255, 204);\">, 우리는 \"복제본\"만 볼 수 있어야 합니다.</strong></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/hide.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>코드를 다음과 같이 완성시켜 깃발을 클릭하자마자 숨겨지게 해보세요.</p>"
+						}
+					]
+				},
+				{
+					"title": "복제본은 보이기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p>벌레가 모두 숨겨져서 보이지 않나요?</p><p><strong style=\"background-color: rgb(255, 255, 204);\">\"원본\" 스프라이트가 숨겨졌기 때문에 \"복제본\"스프라이트도 똑같이 </strong><strong style=\"background-color: rgb(255, 255, 204); color: rgb(177, 3, 252);\">숨겨진 상태</strong><strong style=\"background-color: rgb(255, 255, 204);\">로 </strong><strong style=\"background-color: rgb(255, 255, 204); color: orange;\">복제되었어요.</strong></p><p><br></p><p><br></p><p>아래의 코드를 추가하여 복제본만 보이도록 해줍시다.</p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/\bshow.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p><span style=\"color: orange;\">복제되었을 때 블럭</span>을 사용하면,<strong> </strong><strong style=\"background-color: rgb(255, 255, 204);\">\"복제본\"만 동작하게 만들 수 있습니다.<span class=\"ql-cursor\">﻿</span></strong></p>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"step_title": "벌레 움직이기",
+			"step_no": 2,
+			"step_items": [
+				{
+					"title": "벌레 움직이기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/bug_move.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p>\"복제된 벌레\"는 <span style=\"color: blue;\">보고 있는 방향으로 움직이며</span>, <span style=\"color: blue;\">벽에 닿으면 튕기게 합니다.</span></p><p>\"복제된 벌레\"의 방향은 <span style=\"color: rgb(0, 227, 23);\">랜덤</span>으로 정해줍니다.</p>"
+						}
+					]
+				},
+				{
+					"title": "움직이기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/move.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p>우선, <span style=\"color: blue;\">~만큼 움직이기 블</span>럭과 <span style=\"color: orange;\">무한반복하기 블럭</span>을 이용하여 <strong>\"복제된 벌레\"가 계속 움직이게 합니다.</strong></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/move.png"
+						}
+					]
+				},
+				{
+					"title": "방향 설정하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/\bdirection.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p><span style=\"color: blue;\">~도 방향보기 블럭</span>을 이용하여 \"벌레\"의 방향을 설정해 봅시다.</p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/\bset_direction1.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p><strong style=\"background-color: rgb(255, 255, 204);\">\"복제된 벌레\"의 방향은 </strong><strong style=\"color: orange; background-color: rgb(255, 255, 204);\">복제되었을 때</strong><strong style=\"background-color: rgb(255, 255, 204);\">, 처음에만 설정하면 되므로 무한반복 전에 방향을 설정합니다.</strong></p><p>-90도, 0도 등 방향을 바꾸어 보세요.</p>"
+						}
+					]
+				},
+				{
+					"title": "방향 랜덤하게 설정하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p>\"복제된 벌레\"의 방향은 <span style=\"color: rgb(0, 227, 23);\">랜덤하게</span> 설정해야 합니다.</p><p><span style=\"color: rgb(0, 227, 23);\">~부터 ~사이의 난수 블럭</span>을 이용하여 방향을 랜덤하게 해봅시다.</p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/directions.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p>방향은 <span style=\"background-color: rgb(255, 255, 204);\">-180도 ~ 180도 (또는 0 ~ 360) 까지 존재하므로 </span></p><p><strong style=\"color: rgb(0, 227, 23);\">-180부터 180까지의 난수</strong><strong>로 방향을 설정하면 됩니다.</strong></p><p><br></p><p><strong><span class=\"ql-cursor\">﻿</span></strong></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/set_direction.png"
+						}
+					]
+				}
+			]
+		},
+		{
+			"step_title": "벌레 잡기",
+			"step_no": 3,
+			"step_items": [
+				{
+					"title": "벌레 잡기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/catch_bug.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p><br></p><p>\"복제된 벌레\" 는 <span style=\"color: deepskyblue;\">마우스포인터에 닿고, 스페이스바를 누르면</span> <span style=\"color: rgb(177, 3, 252);\">죽은 모양으로 바뀝니다.</span></p><p>동시에 <span style=\"color: orange;\">점수를 1 증가시키고, </span><span style=\"color: violet;\">소리가 나게 합니다.</span></p><p>죽은 모양으로 바뀐뒤, 그 자리에 <span style=\"color: orange;\">잠시 멈추었다가 삭제됩니다.</span></p>"
+						}
+					]
+				},
+				{
+					"title": "감지하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p>벌레를 잡기 위해서는 <span style=\"background-color: rgb(255, 255, 204);\">두가지 조건</span>이 필요합니다.</p><ol><li><strong>첫째로 </strong><strong style=\"color: deepskyblue;\">스페이스키를 눌러야하며</strong></li><li><strong>둘째로 </strong><strong style=\"color: deepskyblue;\">마우스포인터가 벌레와 닿아야 합니다.</strong></li></ol>"
+						},
+						{
+							"type": "desc",
+							"description": "<p><br></p><p><br></p><p><span style=\"color: deepskyblue;\"><span class=\"ql-cursor\">﻿</span>스페이스키를 눌렀는가?</span> 와 <span style=\"color: deepskyblue;\">마우스 포인터에 닿았는가?</span> 를 동시에 확인하기 위해 </p><p><strong style=\"color: rgb(0, 227, 23);\">그리고 블럭</strong><strong>을 이용합니다.</strong></p><p><br></p><p><br></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/if_detect.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>이제 이 블록을 어느부분에 추가해야할지 생각해봅시다.</p><p><br></p><p>\"벌레\"가 <span style=\"color: orange;\">복제되어</span> \"복제된 벌레\"를 만들고,</p><p>\"복제된 벌레\"는 움직이는것을 <span style=\"color: orange;\">무한반복</span>합니다.</p><p><br></p><p>여기서 \"복제된 벌레\"가 그냥 움직이기만 하는것이 아닌 </p><p><strong style=\"color: deepskyblue;\">스페이스키를 눌렀는가?</strong><strong>&nbsp;</strong><strong style=\"color: rgb(0, 227, 23);\">그리고</strong><strong>&nbsp;</strong><strong style=\"color: deepskyblue;\">마우스 포인터에 닿았는가? </strong><strong style=\"color: black;\">를 감지하며 움직이게끔 합니다.</strong></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/bug_detect.png"
+						}
+					]
+				},
+				{
+					"title": "모양바꾸고 삭제하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p>잡힌 벌레는 <span style=\"color: rgb(177, 3, 252);\">모양을 바꿔주고</span> 잠시 뒤 삭제시킵니다.</p><p><strong>여기서 잡힌 벌레는 복제본이고 다시 보여질 일이 없으니 </strong><strong style=\"color: orange;\">이 복제본 삭제하기 블럭</strong><strong>을 이용하여 삭제합니다.</strong></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/change_costume.png"
+						}
+					]
+				},
+				{
+					"title": "소리와 점수 추가하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p>벌레가 잡힌 순간 <span style=\"color: violet;\">~재생하기 블럭</span>을 이용하여 효과음을 재생합니다.</p><p>또한, <span style=\"color: orange;\">~만큼 바꾸기 블럭</span>을 이용하여 점수를 1 증가시킵니다.</p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/sound_and_score.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>추가로, 게임이 시작할 때 점수는 0부터 시작해야하므로 </p><p><span style=\"color: gold; background-color: rgb(136, 136, 136);\">깃발을 클릭하면</span><span style=\"background-color: rgb(136, 136, 136);\"> </span><span style=\"color: orange; background-color: rgb(136, 136, 136);\">점수를 0으로 정해줍시다.</span></p>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"step_title": "제한시간 설정하기",
+			"step_no": 4,
+			"step_items": [
+				{
+					"title": "제한시간 설정하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/timer.gif"
+						},
+						{
+							"type": "desc",
+							"description": "<p><span style=\"color: orange;\">제한시간을 60초로 정하고 1초에 1씩 감소합니다.</span></p><p>제한시간이 0이 되면, 게임을 <span style=\"color: orange;\">모두 멈춥니다.</span></p>"
+						}
+					]
+				},
+				{
+					"title": "제한시간 감소하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p><span style=\"color: orange;\">~반복하기 블럭과 ~초 기다리기 블럭</span>을 이용하여 <strong>일정 초마다 반복을 할 수 있습니다.</strong></p><p><br></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/decrease.png"
+						},
+						{
+							"type": "desc",
+							"description": "<p>위의 코드는 제한시간을 1초마다 10번 감소시킵니다.</p>"
+						}
+					]
+				},
+				{
+					"title": "게임 멈추기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "<p>제한시간을 60초로 정합니다.</p><p><strong style=\"background-color: rgb(255, 255, 204);\">0까지만 감소하면 되므로 감소를 총 </strong><strong style=\"color: orange; background-color: rgb(255, 255, 204);\">60번 반복합니다.</strong></p><p>반복이 끝난다면,<strong> 60초가 지난 것이므로 </strong><strong style=\"color: orange;\">모두 멈추어 줍니다.</strong></p>"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "catch_bug/\btimer_complete.png"
+						}
+					]
+				}
+			]
+		}
+	],
+	"textbook_folder": "catch_bug"
+}

@@ -87,7 +87,7 @@ class SingleStepDescription extends React.Component{
                     <div key={comp.src+count_for_key} style={{alignItems: "center"}}>
                       {console.log(comp.src)}
                       <div>
-                        <img src={require('../textbook/'+comp.src)} alt={comp.name} width="300px" />
+                        <img src={require('../../textbook/'+comp.src)} alt={comp.name} width="300px" />
                         <br />
                         <b> {reactHtmlParser(comp.name? comp.name:null)} </b>
                         <br />

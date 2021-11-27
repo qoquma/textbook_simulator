@@ -29,7 +29,7 @@ class TextbookPage extends React.Component{
         }):""
         const toast_steps = toast_step_items.map((item)=>{
             count_for_key += 1
-            const image_src = (item.step_items && item.step_items[0].images && item.step_items[0].images.length>0 && item.step_items[0].images[0].src)? (require("../textbook/"+item.step_items[0].images[0].src)) : null
+            const image_src = (item.step_items && item.step_items[0].images && item.step_items[0].images.length>0 && item.step_items[0].images[0].src)? (require("../../textbook/"+item.step_items[0].images[0].src)) : null
             return(
                 <Grid item xs={3} key={item.step_title+count_for_key}>
                     <Paper>

@@ -7,12 +7,10 @@ const CustomToolbar = ({complete, changeFolder, step_no, idx}) => {
   console.log("customToolbar", step_no);
   return (
   <div id={"toolbar"+step_no+idx}>
-    <select className="ql-header">
-      <option value="1"></option>
-      <option value="2"></option>
-      <option value="3"></option>
-      <option value="4"></option>
-    </select>
+    <span class="ql-formats">
+      <select class="ql-font"></select>
+      <select class="ql-size"></select>
+    </span>
       <button className="ql-bold"></button>
       <button className="ql-italic"></button>
       <select className="ql-color">
@@ -27,6 +25,12 @@ const CustomToolbar = ({complete, changeFolder, step_no, idx}) => {
         <option value="black"></option>
       </select>
       <select className="ql-background"></select>
+    <span class="ql-formats">
+      <button class="ql-list" value="ordered"></button>
+      <button class="ql-list" value="bullet"></button>
+      <button class="ql-indent" value="-1"></button>
+      <button class="ql-indent" value="+1"></button>
+    </span>
     
 {/* 
     
