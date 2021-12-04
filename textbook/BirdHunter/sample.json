@@ -1,0 +1,235 @@
+{
+	"textbook_title": "새 사냥",
+	"textbook_subtitle": {
+		"stage": "Adventurer",
+		"language": "Scratch",
+		"level": "3"
+	},
+	"textbook_summary": {
+		"summary_image_src": "",
+		"summary_text": ""
+	},
+	"textbook_contents": [
+		{
+			"step_title": "Step.0 게임 구성요소 생성",
+			"step_no": 0,
+			"step_items": [
+				{
+					"title": "배경 생성하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/background.png"
+						},
+						{
+							"type": "desc",
+							"description": "게임을 진행할 배경을 생성합니다."
+						}
+					]
+				},
+				{
+					"title": "스프라이트 생성하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/sprite_init.png"
+						},
+						{
+							"type": "desc",
+							"description": "'에임','새','탄창','총','게임오버',스프라이트를 생성합니다. "
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/sprite_init_detail.png"
+						},
+						{
+							"type": "desc",
+							"description": "각각의 스프라이트는 위와 같이 여러가지 모양을 가지고 있습니다."
+						}
+					]
+				},
+				{
+					"title": "변수 만들기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/variable.PNG"
+						},
+						{
+							"type": "desc",
+							"description": "'점수','타이머'변수를 생성합니다."
+						}
+					]
+				},
+				{
+					"title": "스프라이트 배치하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/place.PNG"
+						},
+						{
+							"type": "desc",
+							"description": "위 화면과 같이 각각의 스프라이트의 모양과 위치르 설정해줍니다. "
+						}
+					]
+				}
+			]
+		},
+		{
+			"step_title": "Step.1 '에임과 '총' 기본 설정하기 ",
+			"step_no": 1,
+			"step_items": [
+				{
+					"title": "에임 동작하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/aim.gif "
+						},
+						{
+							"type": "desc",
+							"description": "'에임'스프라이트는 마우스포인터를 따라 움직이며, <br />마우스 크릭을 하는 경우 '모양2'로 바꿉니다. "
+						}
+					]
+				},
+				{
+					"title": "총 동작하기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/gun_mov.gif  "
+						},
+						{
+							"type": "desc",
+							"description": "'총'스프라이트는 '에임'이 움직이는 방향을 바라보고 있어야 합니다."
+						},
+						{
+							"type": "desc",
+							"description": "'새'를 잡기 위해 클릭을 하면 '총'의 모양이 바뀌어야 합니다."
+						}
+					]
+				}
+			]
+		},
+		{
+			"step_title": "Step.2 '새'스프라이트 설정하기 ",
+			"step_no": 2,
+			"step_items": [
+				{
+					"title": "새 움직이기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/birmove.gif  "
+						},
+						{
+							"type": "desc",
+							"description": "새는 복제되어 왼쪽에서 오른쪽으로 곡선을 그리며 날아갑니다"
+						},
+						{
+							"type": "desc",
+							"description": "새가 나타나는 y좌표, 새의 크기, 바라보는 방향 모두 랜덤으로 정해줍니다."
+						},
+						{
+							"type": "desc",
+							"description": "날아가면서 '모양1'과 '모양2'를 바꾸며 새가 날개닛하며 날아가는 것 처럼 보이도록 합니다."
+						},
+						{
+							"type": "desc",
+							"description": "---힌트---"
+						},
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/hint1.PNG"
+						},
+						{
+							"type": "desc",
+							"description": "'새'가 곡선을 그리며 날아가는 모양은 조금씩 회전하면서 앞으로 가는 코드를 사용합니다."
+						}
+					]
+				},
+				{
+					"title": "새 잡기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/bird_hunte.gif  "
+						},
+						{
+							"type": "desc",
+							"description": "탄창에 총알이 있는 경우에만 '새'를 클릭했을 때 땅으로 떨어지도록 만듭니다. "
+						},
+						{
+							"type": "desc",
+							"description": "탄창에 총알이 없으면 새를 잡을 수 없습니다."
+						},
+						{
+							"type": "desc",
+							"description": "탄창은 클릭할때마다 1개씩 줄어들며, '스페이스바'를 눌렀을 때 충전이 됩니다. "
+						}
+					]
+				}
+			]
+		},
+		{
+			"step_title": "Step.3 게임 종료",
+			"step_no": 3,
+			"step_items": [
+				{
+					"title": "게임 끝내기",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "image",
+							"name": "",
+							"src": "BirdHunter/gameove.gif  "
+						},
+						{
+							"type": "desc",
+							"description": "'타이머'변수를 활용하여 제한시간(ex,60초)를 주고, 시간이 지나면 게임을 종료시킵니다."
+						}
+					]
+				},
+				{
+					"title": "Extra Work!",
+					"tags": [],
+					"collapse": false,
+					"components": [
+						{
+							"type": "desc",
+							"description": "20초가 지나면 '새'가 이동하는 속도를 빠르게 해줍니다."
+						}
+					]
+				}
+			]
+		}
+	]
+}
