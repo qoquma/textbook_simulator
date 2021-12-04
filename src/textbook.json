@@ -232,7 +232,7 @@
 						{
 							"type": "image",
 							"name": "",
-							"src": "guessNumber/\bcheck_number.png"
+							"src": "guessNumber/check_number.png"
 						},
 						{
 							"type": "desc",
